@@ -1,5 +1,12 @@
+package pizzerria;
+import pizza.Pizza;
+import pizza.PizzaFromageStyleBrest;
+import pizza.PizzaGrecqueStyleBrest;
+import pizza.PizzaPoivronsStyleBrest;
 
 public class PizzeriaBrest extends Pizzeria{
+
+	private static PizzeriaBrest pizzeria=new PizzeriaBrest();
 
 	@Override
 	protected Pizza creerPizza(String type) {
@@ -14,6 +21,10 @@ public class PizzeriaBrest extends Pizzeria{
 		}
 		
 		return pizza;
+	}
+
+	public static Pizzeria getInstance() {
+		return pizzeria;
 	}
 
 }

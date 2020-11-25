@@ -1,4 +1,4 @@
-package java.org.blagnac.cpoa.TP3;
+package org.blagnac.cpoa.TP3;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
