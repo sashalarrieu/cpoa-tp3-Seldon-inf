@@ -20,7 +20,7 @@ public class StepDefinitions {
 		pizzeriaB=PizzeriaBrest.getInstance();
 	}
 	@Then("Les deux Pizzeria sont les mêmes")
-	public void b_cannot_boil() throws Exception {
+	public void les_deux_Pizzeria_sont_les_memes() throws Exception {
 		if(!(pizzeriaB==pizzeriaA)) {
 			throw new Exception("Erreur les deux pizzeria aurez du être les mêmes!");
 		}
