@@ -12,7 +12,7 @@ public class PizzeriaTest {
     @Test
     public void anOrderedPizzaIsNotNull() {
         Pizzeria boutiqueBrest = new PizzeriaBrest();
-        Pizza miam = boutiqueBrest.commanderPizza("cheese");
+        Pizza miam = boutiqueBrest.orderPizza("cheese");
         assertNotNull("An Ordered Pizza Is Not Null",miam);
     }
 
@@ -20,8 +20,8 @@ public class PizzeriaTest {
     public void twoOrderedPizzasAreDifferent() {
         Pizzeria boutiqueBrest = new PizzeriaBrest();
         Pizzeria boutiqueStrasbourg = new PizzeriaStrasbourg();
-        Pizza miam1 = boutiqueBrest.commanderPizza("cheese");
-        Pizza miam2 = boutiqueStrasbourg.commanderPizza ("Greek");
+        Pizza miam1 = boutiqueBrest.orderPizza("cheese");
+        Pizza miam2 = boutiqueStrasbourg.orderPizza ("Greek");
         assertNotEquals("Two Ordered Pizzas Are Different",miam1,miam2);
     }
 }

@@ -13,23 +13,23 @@ public class PizzaGrecqueStyleBrest extends Pizza {
 
 
 	@Override
-	public void couper() {
+	public void cut() {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public void emballer() {
+	public void wrap() {
 		// TODO Auto-generated method stub
 	}
 
 	@Override
-	public String getNom() {
+	public String getName() {
 		// TODO Auto-generated method stub
-		return super.getNom();
+		return super.getName();
 	}
 
 	@Override
-	public void cuire() {
+	public void bake() {
 		// TODO Auto-generated method stub
 		
 	}

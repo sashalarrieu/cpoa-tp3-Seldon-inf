@@ -6,15 +6,15 @@ import java.util.ArrayList;
  */
 public abstract class Pizza {
 
-	String nom;
-	String pate;
+	String name;
+	String crust;//pate
 	String sauce;
 	ArrayList<String> garnitures;
 	
 	
 	
-	public void preparer() {
-		System.out.println("Préparation de "+this.nom);
+	public void prepare() {
+		System.out.println("Préparation de "+this.name);
 		System.out.println("Étalage de la pâte...");
 		System.out.println("Ajout de la sauce...");
 		System.out.println("Ajout des garnitures:");
@@ -23,14 +23,14 @@ public abstract class Pizza {
 		}
 	}
 
-	public abstract void cuire();
+	public abstract void bake();//bake
 
-	public abstract void couper();
+	public abstract void cut();
 
-	public abstract void emballer();
+	public abstract void wrap();
 
-	public String getNom() {
-		return nom;
+	public String getName() {
+		return name;
 	}
 
 

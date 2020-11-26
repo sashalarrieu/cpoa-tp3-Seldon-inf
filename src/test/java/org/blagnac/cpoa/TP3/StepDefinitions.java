@@ -3,46 +3,47 @@ package org.blagnac.cpoa.TP3;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pizza.PizzaFactory;
+import pizza.PizzaFactoryBrest;
 import pizzerria.Pizzeria;
 import pizzerria.PizzeriaBrest;
+import pizzerria.PizzeriaFactory;
 import pizzerria.PizzeriaStrasbourg;
-
-import static org.junit.Assert.*;
 
 public class StepDefinitions {
 	
 	private Pizzeria pizzeriaA;
 	private Pizzeria pizzeriaB;
+	private PizzeriaFactory pizzeriaFactoryA;
+	private PizzeriaFactory pizzeriaFactoryB;
 	
-	@Given("Une pizzeria Brest et une pizzerria Brest")
-	public void une_pizzeria_Brest_et_une_pizzerria_Brest() {
-		pizzeriaA=PizzeriaBrest.getInstance();
-		pizzeriaB=PizzeriaBrest.getInstance();
+	@Given("Deux pizzeria Factory")
+	public void deux_pizzeria_factory() {
+		pizzeriaFactoryA=PizzeriaFactory.getInstance();
+		pizzeriaFactoryB=PizzeriaFactory.getInstance();
 	}
-	@Then("Les deux Pizzeria sont les mêmes")
-	public void les_deux_Pizzeria_sont_les_memes() throws Exception {
-		if(!(pizzeriaB==pizzeriaA)) {
-			throw new Exception("Erreur les deux pizzeria aurez du être les mêmes!");
-		}
+
+	@Then("Deux même pizzeria Factory")
+	public void deux_même_pizzeria_factory() {
+	    if(!(pizzeriaFactoryA.equals(pizzeriaFactoryB))) {
+	    	throw new io.cucumber.java.PendingException();
+	    }
 	}
-//	@When("A is ordered to fill and boil")
-//	public void a_is_ordered_to_fill_and_boil() {
-//		bA.remplir();
-//		bA.bouillir();
-//	}
-//	
-//	@Given("a controller A")
-//	public void a_controller_a() {
-//		pizzeriaA=BouilleurChocolat.getInstance();
-//	}
-//	@When("A is vider")
-//	public void a_is_vider() {
-//	    bA.vider();
-//	}
-//	@Then("A cannot be vider")
-//	public void a_cannot_be_vider() throws Exception {
-//		if(bA.vider().equals("Vider")) {
-//    		throw new Exception("Erreur la bouilloir ne devrait pas pouvoir être vider!");
-//    	}
-//	}
+	
+	@Given("Une pizzeria Factory")
+	public void une_pizzeria_factory() {
+		pizzeriaFactoryA=PizzeriaFactory.getInstance();
+	}
+
+	@When("Creer deux pizzeria Brest")
+	public void creer_deux_pizzeria_brest() {
+		pizzeriaA = pizzeriaFactoryA.create("brest");
+		pizzeriaB = pizzeriaFactoryA.create("brest");
+	}
+	@Then("Deux même pizza Factory Brest")
+	public void deux_même_pizza_factory_brest() {
+	    if(!(pizzeriaA.equals(pizzeriaB))) {
+	    	throw new io.cucumber.java.PendingException("Il ne devrait y avoir que une seule pizza factory brest");
+	    }
+	}
 }

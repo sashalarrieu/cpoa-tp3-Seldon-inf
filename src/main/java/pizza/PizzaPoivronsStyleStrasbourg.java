@@ -6,25 +6,25 @@ package pizza;
 public class PizzaPoivronsStyleStrasbourg extends Pizza {
 
 	@Override
-	public void preparer() {
+	public void prepare() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void cuire() {
+	public void bake() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void couper() {
+	public void cut() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void emballer() {
+	public void wrap() {
 		// TODO Auto-generated method stub
 		
 	}
