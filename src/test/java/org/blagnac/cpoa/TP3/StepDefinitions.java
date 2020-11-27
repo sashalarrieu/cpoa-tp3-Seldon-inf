@@ -16,6 +16,8 @@ public class StepDefinitions {
 	private Pizzeria pizzeriaB;
 	private PizzeriaFactory pizzeriaFactoryA;
 	private PizzeriaFactory pizzeriaFactoryB;
+	private PizzaFactory pizzaFactoryA;
+	private PizzaFactory pizzaFactoryB;
 	
 	@Given("Deux pizzeria Factory")
 	public void deux_pizzeria_factory() {
@@ -30,22 +32,15 @@ public class StepDefinitions {
 	    }
 	}
 	
-	@Given("Une pizzeria Factory")
-	public void une_pizzeria_factory() {
-		pizzeriaFactoryA=PizzeriaFactory.getInstance();
+	@Given("Deux pizza Factory Brest")
+	public void deux_pizza_factory_Brest() {
+		pizzaFactoryA=PizzaFactoryBrest.getInstance();
+		pizzaFactoryB=PizzaFactoryBrest.getInstance();
 	}
-
-	@When("Creer deux pizzeria Brest")
-	public void creer_deux_pizzeria_brest() {
-		pizzeriaA = pizzeriaFactoryA.create("brest");
-		pizzeriaB = pizzeriaFactoryA.create("brest");
-	}
-	
-	
 	
 	@Then("Deux même pizza Factory Brest")
 	public void deux_même_pizza_factory_brest() {
-	    if(!(pizzeriaA.equals(pizzeriaB))) {
+	    if(!(pizzaFactoryA.equals(pizzaFactoryB))) {
 	    	throw new io.cucumber.java.PendingException("Il ne devrait y avoir que une seule pizza factory brest");
 	    }
 	}
