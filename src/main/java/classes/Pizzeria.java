@@ -1,6 +1,5 @@
-package pizzerria;
-import pizza.Pizza;
-import pizza.PizzaFactory;
+package classes;
+
 
 /**
  * @author bruel (from O'Reilly Head-First series)

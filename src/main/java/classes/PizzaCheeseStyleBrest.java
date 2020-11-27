@@ -1,4 +1,6 @@
-package pizza;
+package classes;
+
+
 import java.util.ArrayList;
 
 public class PizzaCheeseStyleBrest extends Pizza{

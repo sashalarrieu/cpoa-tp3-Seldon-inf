@@ -2,10 +2,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import pizza.Pizza;
-import pizzerria.Pizzeria;
-import pizzerria.PizzeriaBrest;
-import pizzerria.PizzeriaStrasbourg;
+import classes.Pizza;
+import classes.Pizzeria;
+import classes.PizzeriaBrest;
+import classes.PizzeriaStrasbourg;
 
 public class PizzeriaTest {
 

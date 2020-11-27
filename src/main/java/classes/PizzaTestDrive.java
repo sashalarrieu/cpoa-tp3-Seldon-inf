@@ -1,8 +1,4 @@
-import pizza.Pizza;
-import pizzerria.Pizzeria;
-import pizzerria.PizzeriaBrest;
-import pizzerria.PizzeriaStrasbourg;
-
+package classes;
 public class PizzaTestDrive {
   public static void main(String[] args) {
     Pizzeria boutiqueBrest = new PizzeriaBrest();
