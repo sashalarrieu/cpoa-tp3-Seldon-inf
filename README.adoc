@@ -1,4 +1,4 @@
-= Design Patterns - TP3
+= Design Patterns - TP31
 J.-M. Bruel <jbruel@gmail.com>
 v20.1 {localdate}
 :tdnum: TP3
