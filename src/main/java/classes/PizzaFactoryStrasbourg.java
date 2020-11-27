@@ -1,4 +1,6 @@
-package pizza;
+package classes;
+
+
 
 public class PizzaFactoryStrasbourg extends PizzaFactory{
 	

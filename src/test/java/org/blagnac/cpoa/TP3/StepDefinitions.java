@@ -1,14 +1,14 @@
 package org.blagnac.cpoa.TP3;
 
+import classes.PizzaFactory;
+import classes.PizzaFactoryBrest;
+import classes.Pizzeria;
+import classes.PizzeriaBrest;
+import classes.PizzeriaFactory;
+import classes.PizzeriaStrasbourg;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pizza.PizzaFactory;
-import pizza.PizzaFactoryBrest;
-import pizzerria.Pizzeria;
-import pizzerria.PizzeriaBrest;
-import pizzerria.PizzeriaFactory;
-import pizzerria.PizzeriaStrasbourg;
 
 public class StepDefinitions {
 	
@@ -40,6 +40,9 @@ public class StepDefinitions {
 		pizzeriaA = pizzeriaFactoryA.create("brest");
 		pizzeriaB = pizzeriaFactoryA.create("brest");
 	}
+	
+	
+	
 	@Then("Deux même pizza Factory Brest")
 	public void deux_même_pizza_factory_brest() {
 	    if(!(pizzeriaA.equals(pizzeriaB))) {

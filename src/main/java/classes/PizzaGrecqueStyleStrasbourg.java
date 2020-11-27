@@ -1,11 +1,13 @@
-package pizza;
+package classes;
+
+
 /**
  * @author bruel (from O'Reilly Head-First series)
  * @depend - * - Pizza
  */
-public class PizzaGrecqueStyleBrest extends Pizza {
+public class PizzaGrecqueStyleStrasbourg extends Pizza {
 
-	public PizzaGrecqueStyleBrest() {
+	public PizzaGrecqueStyleStrasbourg() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

@@ -6,4 +6,5 @@ Feature: Toujours la même PizzaFactoryBrest (singleton)
   Scenario: Essayer de créer deux pizza Factory Brest
   Given Une pizzeria Factory
   When Creer deux pizzeria Brest
+  When Creer deux pizza Factory Brest
   Then  Deux même pizza Factory Brest

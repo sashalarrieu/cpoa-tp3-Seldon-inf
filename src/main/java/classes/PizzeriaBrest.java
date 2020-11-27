@@ -1,5 +1,5 @@
-package pizzerria;
-import pizza.PizzaFactoryBrest;
+package classes;
+
 
 public class PizzeriaBrest extends Pizzeria{
 	public PizzeriaBrest() {
